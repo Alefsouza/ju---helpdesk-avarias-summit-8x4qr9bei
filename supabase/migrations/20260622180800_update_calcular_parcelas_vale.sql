@@ -26,4 +26,4 @@ BEGIN
         RETURN NEXT;
     END LOOP;
 END;
-$;
+$$;

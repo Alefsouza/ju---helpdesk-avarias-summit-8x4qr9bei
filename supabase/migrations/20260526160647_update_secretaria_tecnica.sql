@@ -15,7 +15,7 @@ BEGIN
     SELECT 1 FROM public.perfil_usuario WHERE id = auth.uid() AND tipo_usuario = 'secretaria_tecnica'
   );
 END;
-$;
+$$;
 
 DROP POLICY IF EXISTS "anexos_internos_select" ON public.anexos_chamado_interno;
 CREATE POLICY "anexos_internos_select" ON public.anexos_chamado_interno

@@ -14,7 +14,7 @@ BEGIN
   END IF;
   RETURN NEW;
 END;
-$;
+$$;
 
 DROP TRIGGER IF EXISTS trg_sync_documentos_on_chamado_update ON public.chamados;
 CREATE TRIGGER trg_sync_documentos_on_chamado_update
