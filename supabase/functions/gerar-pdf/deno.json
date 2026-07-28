@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "npm:pdf-lib@1.17.1": "npm:pdf-lib@1.17.1",
+    "npm:docx@8.5.0": "npm:docx@8.5.0"
+  }
+}

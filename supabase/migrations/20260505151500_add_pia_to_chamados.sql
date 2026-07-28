@@ -1,0 +1,1 @@
+ALTER TABLE public.chamados ADD COLUMN IF NOT EXISTS pia TEXT;

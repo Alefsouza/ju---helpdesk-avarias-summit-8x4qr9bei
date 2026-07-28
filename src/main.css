@@ -1,7 +1,6 @@
 /* Global styles - Theme, font, utilities, animations and global components */
 
-/* CHANGE THE FONT BELOW TO WHATEVER YOU WANT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,103 +8,97 @@
 
 @layer base {
   :root {
-    /* Change the colors to match the design system */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Via Sudeste Minimalist Professional Design System Colors */
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 0 0% 13%; /* #212121 */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 13%;
 
-    --primary: 222.2 84% 4.9%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 149 47% 26%; /* #225f3d */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 222.2 84% 4.9%;
+    --secondary: 122 39% 84%; /* #c8e6c9 */
+    --secondary-foreground: 149 47% 26%; /* #225f3d */
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 94%; /* #f0f0f0 */
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 98%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 122 39% 84%; /* #c8e6c9 */
+    --accent-foreground: 149 47% 26%; /* #225f3d */
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 94%; /* #f0f0f0 */
+    --input: 0 0% 94%; /* #f0f0f0 */
+    --ring: 149 47% 26%; /* #225f3d */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 149 47% 26%; /* #225f3d */
+    --sidebar-foreground: 0 0% 100%; /* white */
+    --sidebar-primary: 122 39% 84%; /* #c8e6c9 */
+    --sidebar-primary-foreground: 149 47% 26%; /* #225f3d */
+    --sidebar-accent: 149 47% 32%; /* lighter dark green for hover */
+    --sidebar-accent-foreground: 122 39% 84%; /* #c8e6c9 for hover text */
+    --sidebar-border: 149 47% 20%;
+    --sidebar-ring: 122 39% 84%;
 
-    --sidebar-foreground: 222.2 84% 4.9%;
-
-    --sidebar-primary: 222.2 84% 4.9%;
-
-    --sidebar-primary-foreground: 0 0% 100%;
-
-    --sidebar-accent: 210 40% 98%;
-
-    --sidebar-accent-foreground: 222.2 84% 4.9%;
-
-    --sidebar-border: 214.3 31.8% 91.4%;
-
-    --sidebar-ring: 222.2 84% 4.9%;
-
-    --chart-1: 34 100% 44%;
-    --chart-2: 189 100% 38%;
-    --chart-3: 209 100% 32%;
-    --chart-4: 42 100% 50%;
-    --chart-5: 33 100% 50%;
+    --chart-1: 149 47% 26%;
+    --chart-2: 122 39% 84%;
+    --chart-3: 0 0% 94%;
+    --chart-4: 149 47% 26%;
+    --chart-5: 122 39% 84%;
   }
 
   .dark {
-    /* Change the colors to match the design system consistent with the dark mode */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Kept for consistency, though prompt focuses on light minimal theme */
+    --background: 0 0% 13%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 84% 4.9%;
+    --primary: 149 47% 26%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222.2 84% 4.9%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 122 39% 84%;
+    --secondary-foreground: 149 47% 26%;
 
-    --muted: 222.2 84% 4.9%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 222.2 84% 4.9%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 122 39% 84%;
+    --accent-foreground: 149 47% 26%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222.2 84% 4.9%;
-    --input: 222.2 84% 4.9%;
-    --ring: 214.3 31.8% 91.4%;
-    --sidebar-background: 222.2 84% 4.9%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 149 47% 26%;
+
+    --sidebar-background: 0 0% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 149 47% 26%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222.2 84% 4.9%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222.2 84% 4.9%;
-    --sidebar-ring: 222.2 84% 4.9%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 149 47% 26%;
 
-    --chart-1: 270 100% 44%;
-    --chart-2: 164 100% 38%;
-    --chart-3: 43 100% 32%;
-    --chart-4: 340 100% 50%;
-    --chart-5: 10 100% 50%;
+    --chart-1: 149 47% 26%;
+    --chart-2: 122 39% 84%;
+    --chart-3: 0 0% 94%;
+    --chart-4: 149 47% 26%;
+    --chart-5: 122 39% 84%;
   }
 
   /* NEVER REMOVE THIS */
@@ -116,7 +109,6 @@
 }
 
 @layer utilities {
-  /* KEEP ALL THE ANIMATIONS CLASSES THAT ARE USED BELOW */
   @keyframes accordion-down {
     from {
       height: 0;
@@ -229,17 +221,6 @@
     }
   }
 
-  @keyframes spotlight {
-    from {
-      opacity: 0;
-      transform: translate(-72%, -62%) scale(0.5);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-50%, -40%) scale(1);
-    }
-  }
-
   .animate-accordion-down {
     animation: accordion-down 0.2s ease-out;
   }
@@ -249,42 +230,38 @@
   }
 
   .animate-fade-in {
-    animation: fade-in 0.5s ease-out;
+    animation: fade-in 0.2s ease-out;
   }
 
   .animate-fade-out {
-    animation: fade-out 0.5s ease-out;
+    animation: fade-out 0.2s ease-out;
   }
 
   .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out;
+    animation: fade-in-up 0.4s ease-out;
   }
 
   .animate-fade-in-down {
-    animation: fade-in-down 0.6s ease-out;
+    animation: fade-in-down 0.4s ease-out;
   }
 
   .animate-fade-out-up {
-    animation: fade-out-up 0.6s ease-out;
+    animation: fade-out-up 0.4s ease-out;
   }
 
   .animate-fade-out-down {
-    animation: fade-out-down 0.6s ease-out;
+    animation: fade-out-down 0.4s ease-out;
   }
 
   .animate-slide-up {
-    animation: slide-up 0.6s ease-out;
+    animation: slide-up 0.4s ease-out;
   }
 
   .animate-slide-down {
-    animation: slide-down 0.6s ease-out;
+    animation: slide-down 0.4s ease-out;
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-spotlight {
-    animation: spotlight 2s ease forwards;
   }
 }

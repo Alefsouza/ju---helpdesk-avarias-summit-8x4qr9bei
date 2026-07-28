@@ -1,0 +1,4 @@
+DO $$
+BEGIN
+  ALTER TABLE public.parcelas_vales ADD COLUMN IF NOT EXISTS vale_unificado BOOLEAN NOT NULL DEFAULT FALSE;
+END $$;
