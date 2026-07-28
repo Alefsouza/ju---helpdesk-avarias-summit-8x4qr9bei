@@ -85,6 +85,7 @@ Deno.serve(async (req: Request) => {
       .from('chamados')
       .update({
         responsavel_id: novo_responsavel_id,
+        status: 'em_atendimento',
         status_interno: novoResponsavel.departamento || null,
         atualizado_em: new Date().toISOString(),
       })
