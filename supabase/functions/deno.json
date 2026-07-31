@@ -2,9 +2,9 @@
   "_versions": {
     "criar-chamado-vistoria": 2,
     "gerar-pdf": 3,
-    "importar-frota-xlsx": 3,
+    "importar-frota-xlsx": 4,
     "manage-users": 2,
-    "processar-documento-uazapi": 3,
+    "processar-documento-uazapi": 4,
     "sync-external-registros": 3,
     "transferir-chamado": 4,
     "unificar-chamados": 3,
